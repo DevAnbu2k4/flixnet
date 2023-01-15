@@ -1,0 +1,5 @@
+.content{
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(autofit,minmax(500px 1fr));
+}

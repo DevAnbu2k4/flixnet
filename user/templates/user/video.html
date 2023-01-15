@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{%static 'css/player.css'%}">
+  <title>Video</title>
+</head>
+<body>
+    
+  <div class="heading">Video Player</div>
+  <div class="container">
+
+    <div class="main-video">
+      <div class="video">
+        <video src="{{obb.video.url}}" controls muted autoplay></video>
+        <h3 class="title">{{obb.name}}</h3>
+      </div>
+    </div>
+    <div class="video-list">
+      {% for x in oss.singles.all %}
+       <a href="{% url 'video' x.name%}">
+      <div class="vid">
+        <img src="{{x.template.url}}" height="75px" width="75px">
+        <h3 class="title">{{x.name}}</h3>
+      </div></a>
+      {% endfor%}
+      
+    </div>
+  </div>
+</body>
+</html>
