@@ -31,11 +31,7 @@ hyperlink==21.0.0
 idna==3.3
 importlib-metadata==4.11.4
 incremental==21.3.0
-Kivy==2.1.0
-kivy-deps.angle==0.3.2
-kivy-deps.glew==0.3.1
-kivy-deps.sdl2==0.4.5
-Kivy-Garden==0.1.5
+
 msgpack==1.0.4
 newsapi==0.1.1
 newsapi-python==0.2.6
