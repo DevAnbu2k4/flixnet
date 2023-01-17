@@ -4,7 +4,7 @@
     {
     "src": "watch/wsgi.py",
     "use": "@vercel/python",
-    "config": { "maxLambdaSize": "15mb", "runtime": "python3.7.2" }
+    "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     },
     {
     "src": "build_files.sh",
@@ -24,6 +24,5 @@
     "dest": "watch/wsgi.py"
     }
     ]
-    }
 
-
+}

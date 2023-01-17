@@ -52,6 +52,7 @@ python-dateutil==1.5
 python-magic==0.4.27
 pytz==2022.1
 pywin32==304
+railway==0.0.4
 requests==2.28.0
 service-identity==21.1.0
 six==1.16.0
@@ -61,6 +62,7 @@ twisted-iocpsupport==1.0.2
 txaio==22.2.1
 typing_extensions==4.2.0
 urllib3==1.26.9
+vercel==0.2.1
 virtualenv==20.14.1
 virtualenv-clone==0.5.7
 whitenoise==6.2.0
