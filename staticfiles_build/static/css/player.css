@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+body{
+    background:black;
+}
+.heading{
+    color:#fa4ab0;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+.container .main-video{
+    background: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+.container .main-video video{
+    width: 100%;
+    border-radius: 5px;
+}
+.container .main-video .title{
+    color:#fa4ab0;
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;  
+    width: 750px;
+    display: block;
+    word-wrap: break-word;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.container .video-list{
+    background:black;
+    border-radius: 5px;
+    height: 525px;
+    overflow-y: scroll;
+    color:#fa4ab0;
+    word-wrap: break-word;
+    align-items: flex-start;
+}
+.container .video-list::-webkit-scrollbar{
+    width: 7px;
+}
+.container .video-list::-webkit-scrollbar-track{
+    background: black;
+    border-radius: 50px;
+}
+.container .video-list::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+}
+
+.container .video-list .vid img{
+    width: 100px;
+    border-radius: 5px;
+}
+a{
+    color:#fa4ab0;
+    align-items: flex-end;
+    background: none;
+    text-decoration: none;
+}
+.container .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    background:rgb(59, 59, 59);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0, 1);
+    cursor: pointer;
+}
+.container .video-list .vid .title{
+    word-wrap: break-word;
+    width: 200px;
+    font-size:15px;
+}
+@media(max-width:991px){
+    .container{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+       
+    }
+    .container .main-video .title{
+        width: 400px;
+        
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width:768px){
+    .container{
+        grid-template-columns: 1fr;
+
+    }
+    .container .main-video .title{
+        width: 300px;
+        
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
