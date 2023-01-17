@@ -47,15 +47,16 @@
 					<div class="col-12">
 						<div class="header__content">
 							<!-- header logo -->
-							<a href="index.html" class="header__logo">
-								<img src="{% static 'img/logo.svg'%}" alt="">
+							<a href="{% url 'index'%}" class="header__logo">
+								<img src="{% static 'img/fn.png'%}" alt="">
 							</a>
 							<!-- end header logo -->
 
 							<!-- header nav -->
-							{% if user.is_authenticated%}
+						
 							<ul class="header__nav">
 								<!-- dropdown -->
+								{% if user.is_authenticated%}
 								<li class="header__nav-item">
 									<a href="{% url 'index'%}" class="header__nav-link">Home</a>
 								</li>
@@ -73,13 +74,13 @@
 							<li class="header__nav-item">
 								<a href="{% url 'signup'%}" class="header__nav-link">Sign up</a>
 							</li>	
-							{%endif%}
+						
 								<!-- dropdown -->
-								
+							{%endif%}
 								<!-- end dropdown -->
 							</ul>
 							<!-- end header nav -->
-
+							
 							<!-- header auth -->
 							<div class="header__auth">
 								<button class="header__search-btn" type="button">
@@ -165,9 +166,9 @@
 									</a>
 								</div>
 								<div class="card__content">
-									<h3 class="card__title"><a href="#">{{x.title}}</a></h3>
+									<h3 class="card__title"><a href="title/{{x.title}}">{{x.title}}</a></h3>
 									<span class="card__category">
-										<a href="#">{{x.cat}}</a>
+										<a href="title/{{x.title}}">{{x.cat}}</a>
 									
 									</span>
 									<span class="card__rate"><i class="fa-solid fa-star"></i>{{x.star}}</span>
@@ -233,7 +234,7 @@
 
 									<div class="col-12 col-sm-8">
 										<div class="card__content">
-											<h3 class="card__title"><a href="#">{{a.name}}</a></h3>
+											<h3 class="card__title"><a href="video/{{a.name}}">{{a.name}}</a></h3>
 											
 
 											<div class="card__wrap">

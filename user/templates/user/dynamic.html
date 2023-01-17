@@ -47,8 +47,8 @@
 					<div class="col-12">
 						<div class="header__content">
 							<!-- header logo -->
-							<a href="index.html" class="header__logo">
-								<img src="{% static 'img/logo.svg'%}" alt="">
+							<a href="{% url 'index'%}" class="header__logo">
+								<img src="{% static 'img/fn.png'%}" alt="">
 							</a>
 							<!-- end header logo -->
 
@@ -194,19 +194,13 @@
 
 									<div class="col-12 col-sm-8">
 										<div class="card__content">
-											<h3 class="card__title"><a href="#">{{a.name}}</a></h3>
-											<span class="card__category">
-												<a href="#">Action</a>
-												<a href="#">Triler</a>
-											</span>
+											<h3 class="card__title"><a href="{% url 'video' a.name %}">{{a.name}}</a></h3>
+											
 
 											<div class="card__wrap">
 												<span class="card__rate"><i class="fa-solid fa-star"></i>{{a.views}}</span>
 
-												<ul class="card__list">
-													<li>HD</li>
-													<li>16+</li>
-												</ul>
+												
 											</div>
 											<div class="card__description">
 												<p>{{a.description}}</p>

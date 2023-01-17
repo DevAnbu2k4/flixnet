@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import cloudinary
-import cloudinary_storage
+import cloudinary.uploader
+import cloudinary.api
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +29,7 @@ SECRET_KEY = 'django-insecure-ul^n4nxq)&d3&t9!a!dg487lmoi@743du+zwx_k=9o0o-y4_rb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -127,18 +128,17 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 STATICFILES_DIR = os.path.join(BASE_DIR, 'static/')
-MEDIA_URL_1 = '/media1/'
-MEDIA_ROOT_1 = os.path.join(BASE_DIR, 'media1/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dztgjdtak',
-    'API_KEY': '647567677646751',
-    'API_SECRET': '6j3GEn6exc4Laeqxaw36xpCSS2Y'
-}
+cloudinary.config(
+    cloud_name = "dztgjdtak",
+    api_key = "647567677646751",
+    api_secret = "6j3GEn6exc4Laeqxaw36xpCSS2Y"
+)
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
-
