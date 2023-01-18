@@ -134,7 +134,7 @@ STATICFILES_DIR = os.path.join(BASE_DIR, 'static/')
 =======
 STATICFILES_DIR = os.path.join(BASE_DIR, 'static/'),
 >>>>>>> 3cda459d5d9b0b03a8708d06439fbabe325eed94
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static/')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build","static/")
 
 
 
